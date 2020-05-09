@@ -1,0 +1,47 @@
+.data-input {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 25px;
+  margin-left: 45px;
+}
+
+.brand-logo i.material-icons {
+  font-size: 40px;
+}
+
+.btn-search {
+  text-align: center;
+}
+
+.datepicker-date-display {
+  background-image: url("./style/cosmo-2.jpg");
+}
+
+div.nav-wrapper {
+  background-color: #3f51b5;
+  background-image: url("./style/cosmo-nav.jpg");
+}
+
+.datepicker-table td.is-selected {
+  background-color: #303f9f;
+}
+
+.datepicker-table td.is-today {
+  color: #1a237e;
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: #303f9f;
+  font-weight: bold;
+}
