@@ -1,10 +1,6 @@
 import store from "../store/store";
-import '../plugins';
-import './style.css';
-
-
-
-
+import "../plugins";
+import "./style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   initApp();
@@ -14,5 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store.getData();
   }
 
-  console.log(getDataPickerInstance('.datepicker'));
+  console.log(getDataPickerInstance(".datepicker"));
+  //example
 });
