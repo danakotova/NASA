@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   async function initApp() {
     await store.init();
     store.getData();
+
+    console.log('ADDDDDDDDDDDDd');
   }
 
-  console.log(getDataPickerInstance('.datepicker'));
+
 });
