@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function initApp(inputDate) {
     const receivedPicture = await store.init(inputDate);
+    console.log(receivedPicture);
     pictureUI.renderPicture(receivedPicture);
     
   }

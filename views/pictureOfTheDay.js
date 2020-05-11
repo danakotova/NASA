@@ -10,6 +10,9 @@ class PictureUI {
       this.showEmptyMsg();
       return;
     }
+
+    const result = PictureUI.pictureTemplate(receivedPicture);
+    this.container.insertAdjacentHTML("afterbegin", result);
   }
 
   clearContainer() {
@@ -27,6 +30,25 @@ class PictureUI {
       There is no picture for choosen day. Try to pick another one!
     </div>
     `;
+  }
+
+  static pictureTemplate({ date, url, copyright, explanation }) {
+    return `
+    <div class="card">
+    <div class="card-content">
+      <div class="card-header">
+        <span class= "card-title"> ${date}</span>
+      </div>
+      <hr>
+      <img class="pictureUrl" src=${url}>
+      <hr>
+      <div class="card-text">
+      ${explanation}
+       <hr>
+      ${copyright ? "Copyright: " + copyright : ""}
+      </div>
+    </div>
+  </div>`;
   }
 }
 
