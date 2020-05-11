@@ -2,18 +2,18 @@ import store from "../store/store";
 import "../plugins";
 import "./style.css";
 import formUI from "../views/forms";
+import pictureUI from "../views/pictureOfTheDay"
 
 document.addEventListener("DOMContentLoaded", () => {
-  initApp();
-
+  
   document.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(formUI.inputDateValue);
-
+    initApp(formUI.inputDateValue);
   });
 
-  async function initApp() {
-    await store.init();
-    store.getData();
+  async function initApp(inputDate) {
+    const receivedPicture = await store.init(inputDate);
+    pictureUI.renderPicture(receivedPicture);
+    
   }
 });

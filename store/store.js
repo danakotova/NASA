@@ -10,19 +10,11 @@ class Store {
   }
 
 
-  async init() {
-    const response = await this.api.astronomyPictureOfTheDay();
-    this.date = await response.date;
-    this.explanation = await response.explanation;
-    this.picUrl = await response.hdurl;
+  async init(inputDate) {
+    const response = await this.api.astronomyPictureOfTheDay(inputDate);
     return response;
   }
 
-  getData() {
-    console.log(this.date);
-    console.log(this.explanation);
-    console.log(this.picUrl);
-  }
 }
 
 const store = new Store(api);
